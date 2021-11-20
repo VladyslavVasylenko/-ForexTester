@@ -614,6 +614,10 @@
   }
 }
 
+.show {
+  display: block !important;
+}
+
 @media screen and (max-width: 990px) {
   .borders {
     border-right: none;
