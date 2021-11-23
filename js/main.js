@@ -1,7 +1,11 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+<<<<<<< HEAD
   const deadline = new Date(2021, 10, 25);
+=======
+  const deadline = new Date(2021, 10, 30);
+>>>>>>> 160e3701b86266d29609ba8eec099f2e69bab0d6
   let timerId = null;
 
   function declensionNum(num, words) {
