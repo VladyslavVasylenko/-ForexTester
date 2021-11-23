@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const deadline = new Date(2021, 10, 20);
+  const deadline = new Date(2021, 10, 25);
   let timerId = null;
 
   function declensionNum(num, words) {
@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function countdownTimer() {
     const diff = deadline - new Date();
+    
+    const $days = document.querySelector('.timer__days');
+    const $hours = document.querySelector('.timer__hours');
+    const $minutes = document.querySelector('.timer__minutes');
+    const $seconds = document.querySelector('.timer__seconds');
+
     if (diff <= 0) {
       clearInterval(timerId);
     }
@@ -26,11 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
     $minutes.dataset.title = declensionNum(minutes, ['分', '分', '分']);
     $seconds.dataset.title = declensionNum(seconds, ['2番目', '秒', '秒']);
   }
-  
-  const $days = document.querySelector('.timer__days');
-  const $hours = document.querySelector('.timer__hours');
-  const $minutes = document.querySelector('.timer__minutes');
-  const $seconds = document.querySelector('.timer__seconds');
 
   countdownTimer();
 
